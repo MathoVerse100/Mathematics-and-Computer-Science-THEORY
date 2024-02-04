@@ -1,1 +1,14 @@
+def insertion_sort(l):
+    if len(l) in [0, 1]:
+        return l
+    new_list = l
+    for i in range(1, len(l)):
+        j = 1
+        while i - j >= 0:
+            if new_list[i - j + 1] < new_list[i - j]:
+                new_list[i - j], new_list[i - j + 1] = new_list[i - j + 1],  new_list[i - j]
+                j += 1
+            else:
+                break
 
+    return new_list
